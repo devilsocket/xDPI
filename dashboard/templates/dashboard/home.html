@@ -1,0 +1,26 @@
+{% include 'dashboard/base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bs-component">
+                    <ul class="breadcrumb">
+                        {% for item,status,url in breadcrumb %}
+                            <li class="{{ status }}"><a href="{{ url }}">{{ item }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for title,count in tabs %}
+                <div class="col-md-2">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h3 class="panel-title">{{ title }}</h3></div>
+                        <div class="panel-body">{{ count }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
