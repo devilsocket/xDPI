@@ -9,3 +9,6 @@ class xDPI_upload_history(models.Model):
 	class Meta:
 		managed = True
 		db_table = 'xDPI_upload_history'
+
+
+
